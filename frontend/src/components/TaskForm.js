@@ -107,7 +107,7 @@ const TaskForm = ({ onSubmit, currentTask, onCancel }) => {
             <input
               type="date"
               id="dueDate"
-              value={dueDate}
+              value={dueDate} 
               onChange={(e) => setDueDate(e.target.value)}
             />
           </div>
