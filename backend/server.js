@@ -20,19 +20,16 @@ const allowedOrigins = [
   'http://127.0.0.1:3000',
 ];
 
-const cors = require('cors');
+const cors = require('cors'); // only once
 
 app.use(cors({
   origin: [
     'https://task-manager-9xg3.vercel.app',
-    'https://task-manager-9xg3-git-main-rit25.vercel.app',
-    'https://task-manager-842u.vercel.app'
+    'https://task-manager-9xg3-git-main-rit25.vercel.app'
   ],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
-
-app.use(express.json());
 
 // Routes
 app.use('/api/tasks', taskRoutes);
